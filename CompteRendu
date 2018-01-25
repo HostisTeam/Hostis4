@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import java.util.Date;
+/**
+ *
+ * @author Anthony
+ */
+public class CompteRendu {
+    private String contenu;
+    private Date dateExamen;
+
+    public CompteRendu(){
+        dateExamen = new Date();
+        contenu = new String();
+    }
+    /**
+     * @return the contenu
+     */
+    public String getContenu() {
+        return contenu;
+    }
+
+    /**
+     * @param contenu the contenu to set
+     */
+    public void setContenu(String contenu) {
+        this.contenu = contenu;
+    }
+
+    /**
+     * @return the dateExamen
+     */
+    public Date getDateExamen() {
+        return dateExamen;
+    }
+
+    /**
+     * @param dateExamen the dateExamen to set
+     */
+    public void setDateExamen(Date dateExamen) {
+        this.dateExamen = dateExamen;
+    }
+    
+    
+}
