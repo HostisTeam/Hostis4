@@ -1,0 +1,74 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Noyau;
+
+import java.util.Date;
+
+/**
+ *
+ * @author Raphael
+ */
+public class Patient extends Personne{
+    
+    private String adresse;
+    private String id;
+    private Date dateDeNaissance;
+    
+    public Patient(String n, String p,String ad, Date d,String iD){
+        this.setNom(n);
+        this.setPrenom(p);
+        this.adresse=ad;
+        this.id=iD;
+        this.dateDeNaissance=d;
+    }
+
+    /**
+     * @return the adresse
+     */
+    public String getAdresse() {
+        return adresse;
+    }
+
+    /**
+     * @param adresse the adresse to set
+     */
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the dateDeNaissance
+     */
+    public Date getDateDeNaissance() {
+        return dateDeNaissance;
+    }
+
+    /**
+     * @param dateDeNaissance the dateDeNaissance to set
+     */
+    public void setDateDeNaissance(Date dateDeNaissance) {
+        this.dateDeNaissance = dateDeNaissance;
+    }
+
+   
+    
+   
+    
+}
