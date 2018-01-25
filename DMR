@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class DMR {
+    private Sexe genre;
+    private Patient p ;
+    private ArrayList listeExamens;
+    private CompteRendu compterendu;
+    private int numArchivage;
+    
+    public DMR(Patient p, Sexe g, CompteRendu cr, int num){
+        this.genre=g;
+        this.p=p;
+        listeExamens= new ArrayList<>();
+        this.compterendu=cr;
+        this.numArchivage=num;
+    }
+    
+    public Examen identificationExam(Date d){
+     Examen e = null;
+     for(int i=0; i<listeExamens.size();i++){
+         if(listeExamens.get(i).getCompteRendu().getDateExamen().equals(d)){
+             e = (Examen) listeExamens.get(i);
+         }
+     }
+     return e;
+    }
+    
+    public void addExamen(Examen e){
+        listeExamens.add(e);
+    }
+    
+    public void deleteExam(Examen e){
+        listeExamens.remove(e);
+    }
+}
