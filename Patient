@@ -57,8 +57,17 @@ public class Patient extends Personne{
         this.dateDeNaissance = dateDeNaissance;
     }
 
-   
-    
-   
-    
+    public int calculAge() {
+        int age;
+        Date date = new Date();
+        age = date.getYear() - this.dateDeNaissance.getYear();
+        if ((date.getMonth() - this.dateDeNaissance.getMonth()) < 0){
+            age = age - 1;
+        } else if ((date.getMonth() - this.dateDeNaissance.getMonth()) == 0) {
+            if (date.getDay() - this.dateDeNaissance.getDay() < 0) {
+                age = age - 1;
+            }
+        }
+        return age ;
+    }    
 }
