@@ -1,0 +1,7 @@
+public class ManipulateurEM extends PersonnelHospitalier{
+    
+     public ManipulateurEM(String n, String p, String id, String mdp){
+        super(n,p,id,mdp);
+    }
+}
+
