@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.util.Date;
-/**
- *
- * @author Anthony
- */
+
 public class CompteRendu {
     private String contenu;
     private Date dateExamen;
@@ -16,6 +8,12 @@ public class CompteRendu {
         dateExamen = new Date();
         contenu = new String();
     }
+    
+     public CompteRendu(String c, Date dE){
+        this.dateExamen = dE;
+        this.contenu=c;
+    }
+    
     /**
      * @return the contenu
      */
