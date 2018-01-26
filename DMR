@@ -1,11 +1,24 @@
 
+package SIRProject.fc;
+
+
 import java.util.ArrayList;
 import java.util.Date;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author JOFFREY
+ */
 public class DMR {
     private Sexe genre;
     private Patient p ;
-    private ArrayList listeExamens;
+    private ArrayList<Examen> listeExamens;
     private CompteRendu compterendu;
     private int numArchivage;
     
@@ -17,16 +30,16 @@ public class DMR {
         this.numArchivage=num;
     }
     
-    public Examen identificationExam(Date d){
-     Examen e = null;
+    public ArrayList identificationExam(Date d){
+     ArrayList<Examen> liste = new ArrayList<Examen>();
      for(int i=0; i<listeExamens.size();i++){
-         if(listeExamens.get(i).getCompteRendu().getDateExamen().equals(d)){
-             e = (Examen) listeExamens.get(i);
+         if(listeExamens.get(i).getDate().equals(d)){
+             liste.add(listeExamens.get(i));
          }
      }
-     return e;
+     return liste;
     }
-    
+   
     public void addExamen(Examen e){
         listeExamens.add(e);
     }
@@ -35,3 +48,4 @@ public class DMR {
         listeExamens.remove(e);
     }
 }
+
