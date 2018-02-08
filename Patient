@@ -60,7 +60,7 @@ public class Patient extends Personne{
     }
     
     public Sexe getSexe(){
-        return this.genre;
+        return genre;
     }
 
     public int calculAge() {
