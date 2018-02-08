@@ -7,12 +7,14 @@ public class Patient extends Personne{
     private String adresse;
     private String id;
     private Date dateDeNaissance;
+    private Sexe genre;
     
-    public Patient(String n, String p,String ad, Date d,String iD){
+    public Patient(String n, String p,String ad, Date d,String iD, Sexe g){
         super(n,p);
         this.adresse=ad;
         this.id=iD;
         this.dateDeNaissance=d;
+        this.genre=g;
     }
 
     /**
@@ -55,6 +57,10 @@ public class Patient extends Personne{
      */
     public void setDateDeNaissance(Date dateDeNaissance) {
         this.dateDeNaissance = dateDeNaissance;
+    }
+    
+    public Sexe getSexe(){
+        return this.genre;
     }
 
     public int calculAge() {
