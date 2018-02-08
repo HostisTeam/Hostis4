@@ -16,14 +16,12 @@ import java.util.Date;
  * @author JOFFREY
  */
 public class DMR {
-    private Sexe genre;
     private Patient p ;
     private ArrayList<Examen> listeExamens;
     private CompteRendu compterendu;
     private int numArchivage;
     
-    public DMR(Patient p, Sexe g, CompteRendu cr, int num){
-        this.genre=g;
+    public DMR(Patient p, CompteRendu cr, int num){
         this.p=p;
         listeExamens= new ArrayList<>();
         this.compterendu=cr;
